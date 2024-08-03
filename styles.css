@@ -1,0 +1,52 @@
+/* styles.css */
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    width: 90vw;
+    height: 90vh;
+    border: 10px solid yellow;
+    margin: auto;
+    
+}
+
+#banana_count_panel{
+    background-color: #4caf5b71;
+    height: 10vh;
+}
+
+#clickable-div {
+    height: 80vh;
+    background-color: #4CAF50;
+    background-size: 20vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: url('./movement.png'), auto;
+}
+
+.gorilla_img_01 {
+    background-image: url('./gorilla.png');
+}
+.gorilla_img_02 {
+    background-image: url('./gorilla2.png');
+}
+
+.banana {
+    width: 50px;
+    height: 100px;
+    background: url('./banana.png') no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+    0% {
+        top: -150px; /* start above the screen */
+    }
+    100% {
+        top: calc(100vh - 100px); /* end position at the bottom of the screen */
+    }
+}
